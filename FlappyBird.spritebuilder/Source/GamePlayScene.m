@@ -9,6 +9,8 @@
     // your code here
     character = (Character*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
+    
+    [self addObstacle]
 }
 
 -(void)update:(CCTime)delta
@@ -25,11 +27,7 @@
 {
     NSLog(@"Hello World!");
 }
--(int)doSomethingWithAString:(NSString*) myString
-{
-    //returns the lenght of the string times ten
-    return [myString length] * 10;
-}
+
 
 
 
