@@ -7,6 +7,8 @@
 - (void)initialize
 {
     // your code here
+    character = (Character*)[CCBReader load:@"Character"];
+    [physicsNode addChild:character];
 }
 
 -(void)update:(CCTime)delta
@@ -15,5 +17,20 @@
 }
 
 // put new methods here
+- (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+    //this will get called every time the player touches the screen
+    [character flap];
+}
+- (void) dosomething
+{
+    NSLog(@"Hello World!");
+}
+-(int)doSomethingWithAString:(NSString*) myString
+{
+    //returns the lenght of the string times ten
+    return [myString length] * 10;
+}
+
+
 
 @end
